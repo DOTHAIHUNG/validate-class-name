@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="class" name="class" size="15"/>
+<input type="button" id="check" value="check" onclick="checkClass();"/>
+<script>
+    function checkClass() {
+        let lopHoc = document.getElementById('class');
+        let regexp = /(^([CAP]))+([0-9]{4})+(([GHIKLM])$)/;
+        if (!regexp.test(lopHoc.value)){
+            alert("Ten lop khong hop le");
+            return false;
+        }else {
+            alert("Ten lop hop le");
+        }
+    }
+</script>
+</body>
+</html>
